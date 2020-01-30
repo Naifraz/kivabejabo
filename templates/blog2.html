@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %}{% endblock %}
+
+
+
+
+    {% block content %}
+    <section class="site-section">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8">
+            <div class="row mb-5">
+              <div class="col-md-12 col-lg-12 mb-4 mb-lg-4">
+                <div class="h-entry">
+                  <section id="share-head-section" class=" py-3 text-center container
+                        "style="background-color:LightGray ;">
+                      <div class="container" style="height: 140px;">
+                          <h2>Yes - A visa is required for travel to {{ post.title }}</h2>
+                          <h2> {{ post.body|safe }}</h2>
+
+
+                            </div>
+
+                    </section>
+
+                  </div> 
+              </div>
+              
+              <div class="col-md-12 col-lg-12 mb-4 mb-lg-4">
+                <div class="h-entry">
+
+                  <p>{{ post.body1|safe }}</p>
+				 
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="custom-pagination text-center">
+             <a href="{% url 'blog2' id=post.id|add:'-1' %}" ><span> Prev</span></a>
+             <a href="{% url 'blog2' id=post.id|add:'1' %}"><span>Next </span></a>
+                    <a href="{% url 'blog2' id=3 %}"><span>3 </span></a>
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-md-3 ml-auto">
+
+
+            <div class="mb-5">
+              <h3 class="h5 text-black mb-3">Visa Type</h3>
+              <ul class="list-unstyled">
+               <p>{{ post.body|safe }}   </p>
+              </ul>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="h5 text-black mb-3">Recent Comments</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Quaerat rerum voluptatibus veritatis</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Maiores sapiente veritatis reprehenderit</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Natus eligendi nobis</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+    </section>
+{% endblock %}
+{% block script %} {% endblock %}
+
+
+

@@ -1,0 +1,76 @@
+<style>
+
+
+body {
+  font-family: Arial;
+}
+.con{
+  background-color:#138D75;
+}
+.rex{
+  background-image: url("../images/hero_1.jpg");
+
+
+}
+.rex1{
+  background-image: url("../images/down.jpg");
+
+
+}
+.rex2{
+  background-image: url("../images/dox.jpg");
+
+
+}
+.rex3{
+  background-image: url("../images/dot.jpg");
+
+
+}
+.rex4{
+  background-image: url("../images/dom.jpg");
+
+
+}
+.rex5{
+  background-image: url("../images/pass1.jpg") ;
+
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>

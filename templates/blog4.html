@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheet %}{% endblock %}
+
+
+
+
+    {% block content %}
+    <section class="site-section">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-8">
+            <div class="row mb-5">
+              <div class="col-md-12 col-lg-12 mb-4 mb-lg-4">
+                <div class="h-entry">
+                <h2> living cost {{ post.title }}    </h2>
+
+                  </div>
+              </div>
+
+              <div class="col-md-12 col-lg-12 mb-4 mb-lg-4">
+                <div class="h-entry">
+
+                  <p>{{ post.body|safe }}</p>
+
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="custom-pagination text-center">
+                    {% if post.id > first.id %}
+             <a href="{% url 'blog4' id=post.id|add:'-1' %}" ><span> Prev</span></a>
+                      {% endif %}
+                 {% if post.id < last.id %}
+             <a href="{% url 'blog4' id=post.id|add:'1' %}"><span>Next </span></a>
+                     {% endif %}
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-md-3 ml-auto">
+
+
+
+            <div class="mb-5">
+              <h3 class="h5 text-black mb-3">Popular Posts</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li class="mb-2"><a href="#">Quaerat rerum voluptatibus veritatis</a></li>
+                <li class="mb-2"><a href="#">Maiores sapiente veritatis reprehenderit</a></li>
+                <li class="mb-2"><a href="#">Natus eligendi nobis</a></li>
+              </ul>
+            </div>
+
+            <div class="mb-5">
+              <h3 class="h5 text-black mb-3">Recent Comments</h3>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Quaerat rerum voluptatibus veritatis</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Maiores sapiente veritatis reprehenderit</a></li>
+                <li class="mb-2"><a href="#">Joefrey</a> <em>in</em> <a href="#">Natus eligendi nobis</a></li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+
+    </section>
+{% endblock %}
+{% block script %} {% endblock %}
+
+
+
+
+
